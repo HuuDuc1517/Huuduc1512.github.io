@@ -1,0 +1,14 @@
+.world-clock{
+    margin: 10px 0;
+    border: 1px solid gainsboro;
+    background: gainsboro;
+    
+}
+.city-name{
+    font-size: 10px;
+    /* text-align: left; */
+}
+
+.city-clock{
+    font-size: 30px;
+}
