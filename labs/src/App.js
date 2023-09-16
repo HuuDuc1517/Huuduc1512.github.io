@@ -37,6 +37,7 @@ function App() {
         </Stack>
         <Slider disabled defaultValue={30} aria-label="Disabled slider" />
       </Box>
+      
     </div>
   );
 }
