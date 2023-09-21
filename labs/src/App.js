@@ -10,34 +10,35 @@ import VolumeDown from '@mui/icons-material/VolumeDown';
 import VolumeUp from '@mui/icons-material/VolumeUp';
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import RandomNumber from './components/random';
 
 function App() {
-  const [value, setValue] = React.useState(30);
+  //  const [value, setValue] = React.useState(30);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  //  const handleChange = (event, newValue) => {
+  //    setValue(newValue);
+  //  };
   return (
     <div className="App">
-      {/* <Clock/> */}
+       {/* <Clock/> */}
 
-      {/* <Sum/> */}
+       {/* <Sum/> */}
     
-      {/* <WorldClock tenThanhPho={'Ha Noi'} muiGio={7}/>
-      <WorldClock tenThanhPho={'HongKong'} muiGio={8}/>
-      <WorldClock tenThanhPho={'Croatia'} muiGio={1}/>
-      <WorldClock tenThanhPho={'Korea'} muiGio={9}/> */}
+       {/* <WorldClock tenThanhPho={'Ha Noi'} muiGio={7}/>
+       <WorldClock tenThanhPho={'HongKong'} muiGio={8}/>
+       <WorldClock tenThanhPho={'Croatia'} muiGio={1}/>
+       <WorldClock tenThanhPho={'Korea'} muiGio={9}/> */}
 
-      {/* <Button variant="contained">Đăng Nhập</Button> */}
-      <Box sx={{ width: 200 }}>
-        <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-          <VolumeDown />
-          <Slider aria-label="Volume" value={value} onChange={handleChange} />
-          <VolumeUp />
-        </Stack>
-        <Slider disabled defaultValue={30} aria-label="Disabled slider" />
-      </Box>
-      
+       {/* <Button variant="contained">Đăng Nhập</Button> */}
+       {/* <Box sx={{ width: 200 }}>
+         <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+           <VolumeDown />
+           <Slider aria-label="Volume" value={value} onChange={handleChange} />
+           <VolumeUp />
+         </Stack>
+          <Slider disabled defaultValue={30} aria-label="Disabled slider" />
+         </Box> */}
+      <RandomNumber />
     </div>
   );
 }
