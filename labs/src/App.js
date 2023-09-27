@@ -12,6 +12,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import RandomNumber from './components/random';
 
+import { Routes, Route } from 'react-router-dom';
+
 function App() {
   //  const [value, setValue] = React.useState(30);
 
@@ -20,6 +22,10 @@ function App() {
   //  };
   return (
     <div className="App">
+      <Routes>
+        <Route path='/clock' element={<Clock />}/>
+      </Routes>
+
        {/* <Clock/> */}
 
        {/* <Sum/> */}
@@ -38,7 +44,10 @@ function App() {
          </Stack>
           <Slider disabled defaultValue={30} aria-label="Disabled slider" />
          </Box> */}
+
       <RandomNumber />
+
+      
     </div>
   );
 }

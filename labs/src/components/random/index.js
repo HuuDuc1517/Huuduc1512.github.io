@@ -1,8 +1,25 @@
 import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import './style.css';
+// import './style.css';
+import style from './style.module.css';
+import styled from "styled-components";
 
+const WrapperRandomNumber = styled('div')``
+
+const WrapperFirstRow = styled('div')`
+display: flex;
+justify-content: space-between;
+`
+
+const RandomResult = styled('div')`
+margin: 2rem;
+`
+
+const WapperMinMax = styled('div')`
+display: flex;
+flex-direction: column;
+`
 
 function RandomNumber() {
     const [min, setMin] = useState (0);
@@ -26,22 +43,24 @@ function RandomNumber() {
         setRandom(value)
     }
 
-    
+    console.log('=>>', style)
 
     return (
-        <div className="wrapper-random-number">
-            <div className="wrapper-first-row">
-                <div className="random-result">
+        <WrapperRandomNumber>
+            <WrapperFirstRow>
+                <RandomResult>
                     {random}
-                </div>
-                <div className="wrapper-min-max">
-                    <TextField className='wrapper-min' id="standard-basic" label="min" variant="standard" onChange={handleMinChange}/>
-                    <TextField className='wrapper-max' id="standard-basic" label="max" variant="standard" onChange={handleMaxChange}/>
-                        
-                </div>
-            </div>
-            <Button className='random-button' variant="contained" onClick={handleGenerateButtonClick}>generate</Button>
-        </div>
+                </RandomResult>
+                <WapperMinMax>
+                    <TextField className={style['wrapper-min']} id="standard-basic" label="min" variant="standard" onChange={handleMinChange}/>
+                    <TextField className={style['wrapper-max']} id="standard-basic" label="max" variant="standard" onChange={handleMaxChange}/>
+                </WapperMinMax>
+            </WrapperFirstRow>
+             
+            <Button className={style['random-button']} variant="contained" onClick={handleGenerateButtonClick}>generate</Button>
+                
+        </WrapperRandomNumber>
+        
     )
 }
 
