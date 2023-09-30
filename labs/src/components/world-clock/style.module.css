@@ -1,0 +1,18 @@
+.worldClock{
+    margin: 10px 0;
+    border: 1px solid;
+    background: cadetblue;
+    display: block;
+    align-items: center;
+    padding: 10px;
+    width: 150px;
+}
+.CityName{
+    font-size: 15px;
+    text-align: left;
+    display: flex;
+}
+
+.CityClock{
+    font-size: 20px;
+}
