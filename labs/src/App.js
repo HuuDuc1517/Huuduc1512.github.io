@@ -16,6 +16,7 @@ import style from "styled-components";
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import Gallery from "./components/gallery/gallery";
 import BMICalculator from "./components/bmi";
+import VideoPlayer from "./components/pagevideo";
 
 const WrapperMenu = style("div")`
   border: 1px solid blue;
@@ -46,17 +47,18 @@ function App() {
     navigate("/bmi");
   }
 
+  function HandleVideoPlayerClick() {
+    navigate("/video-player");
+  }
+
   return (
     <div className="App">
       <WrapperMenu>
-        {/* <Link style={{margin: '10px'}} to={'/clock'}>Clock</Link>
-        <Link style={{margin: '10px'}} to={'/random-number'}>RandomNumber</Link>
-        <Link style={{margin: '10px'}} to={'/sum'}>Sum</Link> */}
-
         <Button onClick={HandleRandomClick}>RandomNumber</Button>
         <Button onClick={HandleClockClick}>Clock</Button>
         <Button onClick={HandleGalleryClick}>Gallery</Button>
         <Button onClick={HandleBMIClick}>BMI</Button>
+        <Button onClick={HandleVideoPlayerClick}>VideoPlayer</Button>
       </WrapperMenu>
 
       <Routes>
@@ -64,11 +66,10 @@ function App() {
         <Route path="/random-number" element={<RandomNumber />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/bmi" element={<BMICalculator />} />
+        <Route path="/video-player" element={<VideoPlayer />}/>
       </Routes>
 
       {/* <Clock/> */}
-
-      {/* <Sum/> */}
 
       {/* <WorldClock tenThanhPho={'Ha Noi'} muiGio={7}/>
        <WorldClock tenThanhPho={'HongKong'} muiGio={8}/>
@@ -84,10 +85,6 @@ function App() {
          </Stack>
           <Slider disabled defaultValue={30} aria-label="Disabled slider" />
          </Box> */}
-
-      {/* <RandomNumber /> */}
-
-      {/* <Gallery/> */}
     </div>
   );
 }
